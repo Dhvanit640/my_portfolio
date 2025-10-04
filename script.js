@@ -38,28 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Contact form submission
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value || 'Portfolio Contact';
-            const message = document.getElementById('message').value;
-            
-            const mailtoLink = `mailto:your.pdhvanit81@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
-            
-            window.location.href = mailtoLink;
-            
-            // Reset form   
-            contactForm.reset();
-            
-            // Show success message (you could add a proper notification here)
-            alert('Thank you for your message! Your email client should open automatically.');
-        });
-    }
+     
     
     // Animation on scroll
     const animateOnScroll = function() {
